@@ -2,14 +2,14 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class Gigasecond {
-  LocalDateTime addedGetDateTime;
+  private LocalDateTime addedGetDateTime;
+  private int gigasecond = 1_000_000_000;
     public Gigasecond(LocalDate moment) {
-
-      addedGetDateTime = moment.atStartOfDay().plusSeconds((long)1e9d);
+      this(moment.atStartOfDay());
     }
 
     public Gigasecond(LocalDateTime moment) {
-        addedGetDateTime = moment.plusSeconds((long)1e9d);
+        addedGetDateTime = moment.plusSeconds(gigasecond);
     }
 
     public LocalDateTime getDateTime() {
