@@ -3,7 +3,7 @@ import java.time.LocalDateTime;
 
 public class Gigasecond {
   private LocalDateTime addedGetDateTime;
-  private int gigasecond = 1_000_000_000;
+  private static final int gigasecond = 1_000_000_000;
     public Gigasecond(LocalDate moment) {
       this(moment.atStartOfDay());
     }
